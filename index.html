@@ -1248,6 +1248,7 @@ async function loadConversations() {
     renderActiveCallsList();
     detectConference();
     updateMergeButton();
+    if (selectedQueueIds.size > 0) loadAllSelectedQueueCalls();
     hideBanner();
     setStatus("Ready");
   } catch (e) {
